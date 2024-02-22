@@ -51,4 +51,17 @@ async def update_earl_list(ctx, name_player, number_of_points: int):
     await ctx.send(f' {name_player} has a score of {score}')
 
 
+@bot.command(name='quote', help='domme aron/joyce quote')
+async def quote(ctx):
+    list_of_quotes=[
+        'Rotterdam',
+        'Pikachu',
+        'Waarom scheld je zo?',
+        'Wil je een tafel?'
+    ]
+
+    response = random.choice(list_of_quotes)
+    await ctx.send(response)
+
+
 bot.run(TOKEN)
